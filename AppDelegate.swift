@@ -21,9 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpBarStyle()
         setEnterController()
         
-       
-//        let vc = JTMainViewController()
-//        window?.rootViewController = vc;
         window?.makeKeyAndVisible()
         return true
     }
@@ -69,22 +66,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             
             //版本升级后，根据版本号来判断是否进入
-            self.window?.rootViewController = JTWelcomeController()
-            
-//            let version: String = (userDefault.string(forKey: Constants.HDAppVersion))!
-//            if ( appVersion == version) {
-//
-//                //                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
-//                self.window?.rootViewController = JTMainViewController()
-//
-//            } else {
-//
-//                userDefault.setValue(appVersion, forKey: Constants.HDAppVersion)
-//                userDefault.synchronize()
-//                self.window?.rootViewController = JTWelcomeController()
-//
-//            }
-            
+            let version: String = (userDefault.string(forKey: Constants.HDAppVersion))!
+            if ( appVersion == version) {
+
+                //                UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.lightContent, animated: true)
+                self.window?.rootViewController = JTMainViewController()
+
+            } else {
+
+                userDefault.setValue(appVersion, forKey: Constants.HDAppVersion)
+                userDefault.synchronize()
+                self.window?.rootViewController = JTWelcomeController()
+            }
         }
     }
     

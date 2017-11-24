@@ -14,6 +14,8 @@ class JTHomeViewController: JTBaseController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         
+        JTCommon.showSuccessHUD(self.view, title: "分享成功")
+        
         var imageView = UIImageView ()
         imageView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight);
         imageView.image = UIImage.init(named: "guide_step4")

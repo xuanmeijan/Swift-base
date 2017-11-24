@@ -13,6 +13,8 @@ class JTMineViewController: JTBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+        
+        JTCommon.showSuccessHUD(self.view, title: "分享成功")
     }
 
     override func didReceiveMemoryWarning() {
