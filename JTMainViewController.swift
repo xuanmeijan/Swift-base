@@ -14,7 +14,7 @@ class JTMainViewController: UITabBarController, UITabBarControllerDelegate {
     var hdhm01vc: JTHomeViewController!
     var hdcg01vc: JTHomeViewController!
     var hdgg01vc: JTHomeViewController!
-    var hddy01vc: JTHomeViewController!
+    var hddy01vc: JTMessageViewController!
     var hdct01vc: JTHomeViewController!
     
     override func viewDidLoad() {
@@ -79,7 +79,7 @@ class JTMainViewController: UITabBarController, UITabBarControllerDelegate {
         
         if hddy01vc == nil {
             
-            hddy01vc = JTHomeViewController()
+            hddy01vc = JTMessageViewController()
             hddy01vc.tabBarItem = UITabBarItem(title: "动态", image: UIImage(named: "tab_icon_off_02")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), selectedImage: UIImage(named: "tab_icon_on_02")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal))
             hddy01vc.title = "动态"
             navc = JTBaseNavigationController(rootViewController: hddy01vc)
